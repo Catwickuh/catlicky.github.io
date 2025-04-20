@@ -21,7 +21,7 @@
   </div>
   
   <section class="hero">
-    <img src="assets/images/pfp.jpg" alt="Avatar" class="avatar" />
+    <img src="assets/images/pfp.jpg" alt="Avatar" id="avatar" class="avatar" />
     <div class="intro">
       <h2>Hey, I'm <br><span>catlicker</span></h2>
       <p></p>
@@ -72,6 +72,16 @@
       mainSite.classList.add('visible');
     }, 500);
   });
+
+  //hover shit for the icon
+  const box = document.getElementById('avatar');
+  box.addEventListener('mouseleave', triggerBounce);
+ 
+  const triggerBounce = () => {
+    box.classList.remove('bounce-anim'); 
+    void box.offsetWidth; 
+    box.classList.add('bounce-anim'); 
+  };
 </script>
 </body>
 </html>
