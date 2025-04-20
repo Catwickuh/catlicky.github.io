@@ -7,44 +7,71 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="topbar">
-  <h1 class="logo">catlicky</h1>
-</header>
+<audio id="_music" style="display:none;">
+  <source src="assets/music/LOTP.mp3" type="audio/mpeg">
+</audio>
 
-<section class="hero">
-  <img src="images/pfp.jpg" alt="Avatar" class="avatar" />
-  <div class="intro">
-    <h2>Hey, I'm <br><span>catlicker</span></h2>
-    <p></p>
-    <a href="https://discord.gg/463ScTUR">
-      <div href="https://discord.gg/463ScTUR" class="btn">
-        <div>Discord</div>
-        <span class="icon">
-          <img src="images/discord.png" alt="icon" width="50" height="50">
-        </span>
-      </div>
-    </a>
-  </div>
-</section>
+<div id="wrapper">
+  <header class="topbar">
+    <h1 class="logo">catlicky</h1>
+  </header>
 
-<section class="features">
-  <div class="card">
-    <h3>Connections</h3>
-    <a href="https://github.com/catwickuh">
-      <img class="connection" src="images/github.png" alt="icon" width="40" height="40">
+  <div class="overlay" id="splash">
+    Catlicky
+  </div>
+  
+  <section class="hero">
+    <img src="assets/images/pfp.jpg" alt="Avatar" class="avatar" />
+    <div class="intro">
+      <h2>Hey, I'm <br><span>catlicker</span></h2>
+      <p></p>
+      <a href="https://discord.gg/463ScTUR">
+        <div class="btn">
+          <div>Discord</div>
+          <span class="icon">
+            <img src="assets/images/discord.png" alt="icon" width="50" height="50">
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <section class="features">
+    <div class="card">
+      <h3>Connections</h3>
+      <a href="https://github.com/catwickuh">
+        <img class="connection" src="assets/images/github.png" alt="icon" width="40" height="40">
+      </a>
+      <a href="https://t.me/catlicky">
+      <img class="connection" src="assets/images/telegram.png" alt="icon" width="40" height="40">
     </a>
-    <a href="https://t.me/catlicky">
-    <img class="connection" src="images/telegram.png" alt="icon" width="40" height="40">
-  </a>
-  </div>
-  <div class="card">
-    <h3>What do i do</h3>
-    <p>I make cheats for Gorilla Tag (Menus, Loader).</p>
-  </div>
-  <div class="card">
-    <h3>I code in</h3>
-    <p>c/c++, c#, js, java, html probably wont learn anything else</p>
-  </div>
-</section>
+    </div>
+    <div class="card">
+      <h3>What do i do</h3>
+      <p>I make cheats for Gorilla Tag (Menus, Loader).</p>
+    </div>
+    <div class="card">
+      <h3>I code in</h3>
+      <p>c/c++, c#, js, java, html probably wont learn anything else</p>
+    </div>
+  </section>
+</div>
+<script>
+
+  const splash = document.getElementById('splash');
+
+  const mainSite = document.getElementById('wrapper');
+  const music = document.getElementById('_music');
+
+  document.addEventListener('click', function() {
+    music.play();
+
+    splash.classList.add('hidden');
+    setTimeout(() => {
+      splash.style.display = 'none';
+      mainSite.classList.add('visible');
+    }, 500);
+  });
+</script>
 </body>
 </html>
