@@ -75,13 +75,14 @@
 
   //hover shit for the icon
   const box = document.getElementById('avatar');
-  box.addEventListener('mouseleave', triggerBounce);
- 
   const triggerBounce = () => {
-    box.classList.remove('bounce-anim'); 
-    void box.offsetWidth; 
-    box.classList.add('bounce-anim'); 
+    box.classList.remove('bounce-anim');
+    void box.offsetWidth;
+    box.classList.add('bounce-anim');
   };
+  
+  box.addEventListener('mouseleave', triggerBounce);
+  
 </script>
 </body>
 </html>
